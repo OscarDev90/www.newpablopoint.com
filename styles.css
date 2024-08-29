@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#mainContainer {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#slidesContainer {
+    width: 20%;
+    background-color: #ffa500;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#slidesPreview {
+    height: calc(100% - 40px);
+    overflow-y: auto;
+}
+
+#slidesPreview .slidePreview {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+#activeSlideContainer {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#activeSlide {
+    height: 80%;
+    background-color: white;
+    border: 2px solid #ffa500;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#controlButtons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #ffa500;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #e69500;
+}
+
+.resizer {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    cursor: nwse-resize;
+}
+
+.resizer.bottom-right {
+    right: 0;
+    bottom: 0;
+}
+
+.draggable {
+    cursor: move;
+}
